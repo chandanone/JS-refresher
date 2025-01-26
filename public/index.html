@@ -34,6 +34,10 @@
         displayJob.innerHTML = `Job: <h1>${job}</h1>`;
         displayJob.setAttribute("style", "background-color:red;");
         submit.setAttribute("disabled", "true");
+
+        setTimeout(() => {
+          submit.removeAttribute("disabled");
+        }, 3000);
       }
     </script>
   </body>
