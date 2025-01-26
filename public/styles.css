@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.container {
+  background-color: antiquewhite;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#myFile {
+  background-color: greenyellow;
+  color: black;
+}
