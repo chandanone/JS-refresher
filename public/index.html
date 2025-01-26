@@ -6,7 +6,7 @@
     <title>Img2PDF</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body style="display: flex; flex-direction: column; justify-content: center">
+  <body style="display: flex; flex-direction: column; align-items: center">
     <div class="conatiner">
       <label for="name">Name</label>
       <input type="text" id="name" placeholder="enter your name" />
@@ -14,7 +14,7 @@
       <label for="job">Job</label>
       <input type="text" id="job" placeholder="enter your job" />
       <br /><br />
-      <input type="submit" onClick="displayresult()" />
+      <input id="submit" type="submit" onClick="displayresult()" />
     </div>
     <div class="result">
       <h1>Display result here:</h1>
@@ -26,11 +26,14 @@
       function displayresult() {
         const name = document.getElementById("name").value;
         const job = document.getElementById("job").value;
+        const submit = document.getElementById("submit");
 
         const displayName = document.getElementById("display-name");
         const displayJob = document.getElementById("display-job");
         displayName.innerHTML = `Name: <h1>${name}</h1>`;
         displayJob.innerHTML = `Job: <h1>${job}</h1>`;
+        displayJob.setAttribute("style", "background-color:red;");
+        submit.setAttribute("disabled", "true");
       }
     </script>
   </body>
